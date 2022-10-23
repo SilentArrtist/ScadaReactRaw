@@ -1,0 +1,42 @@
+//Create table
+// sql = `CREATE TABLE devices(id INTEGER PRIMARY KEY,ip,holdingRegisters,inputRegisters,coils)`
+// db.run(sql)
+// sql = `CREATE TABLE users(id INTEGER PRIMARY KEY,login,password,role)`
+// db.run(sql)
+
+//Drop table
+// db.run('DROP TABLE devices')
+// db.run('DROP TABLE users')
+
+//Insert value
+// sql = `INSERT INTO devices(ip,holdingRegisters,inputRegisters,coils) VALUES (?,?,?,?)`;
+// db.run(sql,[ip,[0,0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0,0]],(err)=>{ if(err) return console.error(err.message)})
+// sql = `INSERT INTO users(login,password,role) VALUES (?,?,?)`;
+// db.run(sql,["login","hashPassword","USER"],(err)=>{if(err) return console.error(err.message)})
+
+//Update value
+// sql = `UPDATE holding_registers SET value = ? where modbus_index = ?`
+// db.run(sql,[5,0],(err)=>{
+//     if(err) return console.error(err.message)
+// })
+// sql = `UPDATE input_registers SET value = ? where modbus_index = ?`
+// db.run(sql,[14,0],(err)=>{
+//     if(err) return console.error(err.message)
+// })
+// sql = `UPDATE coils SET value = ? where modbus_index = ?`
+// db.run(sql,[10,0],(err)=>{
+//     if(err) return console.error(err.message)
+// })
+
+
+//Querry value
+// sql = `SELECT * FROM devices`
+// db.all(sql,[],(err,rows)=>{
+//     if(err) return console.error(err.message)
+//     console.log(rows);
+// })
+// sql = `SELECT * FROM users`
+// db.all(sql,[],(err,rows)=>{
+//     if(err) return console.error(err.message)
+//     console.log(rows);
+// })

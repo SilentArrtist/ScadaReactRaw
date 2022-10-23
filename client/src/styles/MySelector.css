@@ -1,0 +1,15 @@
+.custom_selector{
+    width: 100px;
+    background-color:black;
+    color:white;
+    margin: 2.5px 0;
+}
+
+.custom_selector *{
+    background-color:black;
+    color:white
+}
+
+option:checked {
+  color:red;
+}

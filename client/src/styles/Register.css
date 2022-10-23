@@ -1,0 +1,8 @@
+.registerBox{
+    padding: 5px;
+    margin: 5px;
+    border-radius: 4px;
+    max-height: 50px;
+    border: 1px solid black;
+    justify-self: start;
+}

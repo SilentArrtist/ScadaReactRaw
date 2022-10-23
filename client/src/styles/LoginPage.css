@@ -1,0 +1,19 @@
+.login-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 350px;
+    margin:0 auto;
+}
+.login-form{
+    display: flex;
+    flex-direction: column;
+}
+.login-input{
+    width: 100%;
+    padding: 5px 20px 5px 10px;
+    margin: 3px 0;
+}
+.login-btn{
+    padding: 5px 10px;
+}

@@ -1,0 +1,232 @@
+.pop_up{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    left:0;
+    top:0;
+    background-color: rgba(0,0,0,.6);
+    z-index: 15;
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.4s all;
+}
+.pop_up.active{
+    display: block;
+    opacity: 1;
+    pointer-events: all;
+}
+.pop_up_body{
+    position: relative;
+    cursor:pointer;
+    align-items: center;
+    z-index: 5;
+    top: 25%;
+    left: 25%;
+    white-space: pre-line;
+    display: flex;
+    justify-content: center;  
+    overflow: hidden;
+    align-items: center;
+    border:1px solid black;
+    z-index: 5;
+    flex-direction: column;
+    background-color: #fff;
+    border-radius: 10px;
+    text-align: center;
+    padding: 25px 15px 30px 15px;
+}
+
+.popUpBlock{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 5px 0;
+}
+.pop_up_move{
+    position: absolute;
+    top: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 20px;
+    font-weight: 900;
+    cursor:grab;
+    color:black;
+}
+/*Settings PopUp*/
+.pop_up_variant{
+    position: relative;
+    text-decoration: none;
+    color: black;
+    font-size: 21px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.pop_up_variant::after{
+    position: absolute;
+    content: "";
+    height: 2px;
+    bottom: -3px;
+    left: 10%;
+    background-color: black;
+    max-width: 80%;
+    width: 0%;
+}
+.pop_up_variant:hover::after{
+    transition: cubic-bezier(0.785, 0.135, 0.15, 0.86) .2s all;
+    width: 100%;
+}
+.info{
+    width: 300px;
+}
+.paramBlock{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 2px 0;
+}
+details[open] summary ~ * {
+    animation: sweep 0.55s ease;
+}
+@keyframes sweep {
+    0%    {opacity: 0; margin-top: -10px}
+    100%  {opacity: 1; margin-top: 0px}
+}
+.pop_up_delete{
+    position: absolute;
+    top: 30px;
+    right: 15px;
+    font-size:20px;
+    font-weight: 900;
+    cursor: pointer;
+}
+/*Devices PopUp*/
+#device_popUpBlock{
+    width: 100%;
+    height: 70%;
+    /* margin: 50px 10px; */
+    padding: 0px 10px;
+    border: 1px solid black;
+    overflow-y: auto;
+}
+.devices_block{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid black;
+    margin: 10px 0;
+}
+.device_btn{
+    margin: 5px 5px;
+    padding: 3px 10px;
+}
+.add_device_block{
+    display: flex;
+    width: 100%;
+    margin-top: 15px;
+    justify-content: center;
+}
+.addDevice_input{
+    padding: 5px 10px;
+}
+.add_btn{
+    padding: 3px 5px;
+    margin-left: 5px;
+}
+/*Device Data PopUp*/
+.container{
+    position: relative;
+    border: 1px solid black;
+    border-radius: 5px;
+    width: 100%;
+    margin-top: 5vh;
+    height: 50vh;
+    display: grid;
+    overflow: auto;
+    grid-template-columns: repeat(4, 1fr);
+    grid-column-gap: 5px;
+    grid-row-gap: 5px;
+}
+
+.outputTypes{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 5vh;
+    width: 100vh;
+}
+.selector{
+    width: 25vh;
+}
+.changeType{
+    position: relative;
+    text-decoration: none;
+    color: black;
+    font-size: 21px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.changeType::after{
+    position: absolute;
+    content: "";
+    height: 2px;
+    bottom: -3px;
+    left: 0px;
+    background-color: black;
+    max-width: 100%;
+    width: 0%;
+}
+
+.changeType:hover::after{
+    transition: cubic-bezier(0.785, 0.135, 0.15, 0.86) .2s all;
+    width: 100%;
+}
+
+/* .selectors_block{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#selectorBlock{
+    align-self: center;
+    width: 51.5%;
+}
+#connectBlock{
+    width: 150px;
+} */
+
+
+#settingsPopUp_body{
+    width: 500px;
+    height: 400px;
+}
+#devicePopUp_body{
+    width: 500px;
+    height: 450px;
+    display: flex;
+    justify-content: center;
+}
+#dataPopUp_body{
+    width: 1000px;
+    height: 600px;
+}
+#connectionPopUp_body{
+    width: 400px;
+    height: 200px;
+}
+.connectionBlock{
+    margin-top: 25px;
+    width: 70%;
+}
+.NoConnectionH1{
+    color: black;
+}
+p, span{
+    color: black;
+}
+.dynamicValueInput{
+    width: 100px;
+}

@@ -1,0 +1,9 @@
+.App {
+  height: 100vh;
+  position: relative;
+  display: flex;
+  text-align: center;
+  color: white;
+  background: teal;
+  width: 100%;
+}
